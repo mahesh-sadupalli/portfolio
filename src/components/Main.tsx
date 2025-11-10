@@ -21,7 +21,8 @@ function Main() {
             <a href="https://blackforestde.medium.com/" target="_blank" rel="noreferrer"><MediumIcon/></a>
           </div>
           <h1>Mahesh Sadupalli</h1>
-          <p>AI/Data science Engineer | M.Sc. AI @ BTU Cottbus-Senftenberg | BS Data science @ IIT Madras</p>
+          <p>AI/Data science Engineer</p>
+          <p>M.Sc. AI @ BTU Cottbus-Senftenberg | BS Data science @ IIT Madras</p>
 
           <div className="mobile_social_icons">
             <a href="https://github.com/mahesh-sadupalli" target="_blank" rel="noreferrer"><GitHubIcon/></a>
