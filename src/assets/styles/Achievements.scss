@@ -1,0 +1,108 @@
+.achievements-container {
+    padding: 4rem 2rem;
+    
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .achievements-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .achievement-card {
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .achievement-icon {
+            color: #5000ca;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #272822;
+        }
+
+        .achievement-type {
+            font-size: 0.9rem;
+            color: #5000ca;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666666;
+        }
+    }
+}
+
+// Dark mode styles
+.dark {
+    .achievements-container {
+        .achievement-card {
+            background: rgba(255, 255, 255, 0.05);
+            
+            &:hover {
+                background: rgba(255, 255, 255, 0.08);
+            }
+
+            h3 {
+                color: #ffffff;
+            }
+
+            p {
+                color: #cccccc;
+            }
+
+            .achievement-icon {
+                color: #8b5cf6;
+            }
+
+            .achievement-type {
+                color: #a78bfa;
+            }
+        }
+    }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+    .achievements-container {
+        padding: 3rem 1.5rem;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .achievements-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .achievement-card {
+            padding: 1.5rem;
+        }
+    }
+}

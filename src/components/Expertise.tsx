@@ -1,23 +1,22 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBrain, faChartLine, faCloud } from '@fortawesome/free-solid-svg-icons';
+import { faBrain, faCode, faCloud, faAward } from '@fortawesome/free-solid-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
 const labelsFirst = [
     "PyTorch",
     "Scikit-Learn",
-    "TensorFlow",
+    "LangChain",
+    "Spark",
     "ONNX",
+    "PowerBI",
     "Computer Vision",
     "Deep Learning",
     "CNNs",
     "Transformers",
-    "GANs",
-    "Neural Networks",
-    "LangChain",
-    "RAG"
+    "Statistical Analysis"
 ];
 
 const labelsSecond = [
@@ -27,25 +26,34 @@ const labelsSecond = [
     "SQL",
     "Git",
     "Linux",
-    "Docker",
-    "Jenkins",
-    "PostgreSQL",
-    "MongoDB",
-    "FAISS",
-    "Neo4j"
+    "Shell Scripting",
+    "Data Processing",
+    "ETL Pipelines",
+    "API Development"
 ];
 
 const labelsThird = [
     "AWS",
     "GCP",
+    "Docker",
     "Kubernetes",
     "Terraform",
+    "Jenkins",
     "CI/CD",
-    "Spark",
-    "PowerBI",
-    "MLOps",
     "CloudWatch",
-    "Prometheus"
+    "Prometheus",
+    "MLOps"
+];
+
+const labelsFourth = [
+    "PostgreSQL",
+    "MongoDB",
+    "FAISS",
+    "Pinecone",
+    "Neo4j",
+    "SQL Databases",
+    "Vector Databases",
+    "Graph Databases"
 ];
 
 function Expertise() {
@@ -56,8 +64,8 @@ function Expertise() {
             <div className="skills-grid">
                 <div className="skill">
                     <FontAwesomeIcon icon={faBrain} size="3x"/>
-                    <h3>AI/ML Research & Development</h3>
-                    <p>Specialized in neural network architectures, computer vision, and deep learning. Currently researching neural network-based compression achieving 20-50x ratios with sub-1% error. Experienced with multimodal learning, transformers, and GANs across healthcare and vision domains.</p>
+                    <h3>AI/ML & Data Science</h3>
+                    <p>Currently conducting Master's thesis research on neural network-based data compression at Rolls Royce, BTU, and TU Berlin, achieving 20-50x compression ratios. Developing multimodal deep learning models at Robert Koch Institute using PyTorch and Vision Transformers, integrating satellite imagery with sociodemographic data for healthcare predictions with F1 scores of 0.75-0.85.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsFirst.map((label, index) => (
@@ -67,9 +75,9 @@ function Expertise() {
                 </div>
 
                 <div className="skill">
-                    <FontAwesomeIcon icon={faChartLine} size="3x"/>
-                    <h3>Software Engineering & Data Systems</h3>
-                    <p>Full-stack development expertise spanning backend systems, databases, and production ML pipelines. Built enterprise microservices, implemented CI/CD workflows, and developed scalable data processing systems for research and production environments.</p>
+                    <FontAwesomeIcon icon={faCode} size="3x"/>
+                    <h3>Programming & Data Engineering</h3>
+                    <p>Proficient in multiple programming languages with strong experience in data processing, database management, and building scalable data pipelines. Developed SQL databases for epidemiological research, conducted statistical analysis for healthcare studies, and built data processing systems for research and production environments.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsSecond.map((label, index) => (
@@ -85,6 +93,18 @@ function Expertise() {
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsThird.map((label, index) => (
+                            <Chip key={index} className='chip' label={label} />
+                        ))}
+                    </div>
+                </div>
+
+                <div className="skill">
+                    <FontAwesomeIcon icon={faAward} size="3x"/>
+                    <h3>Databases & Storage Systems</h3>
+                    <p>Hands-on experience with relational, NoSQL, vector, and graph databases. Built and managed database systems for epidemiological research, implemented vector databases for AI applications, and designed data storage solutions for scalable ML pipelines.</p>
+                    <div className="flex-chips">
+                        <span className="chip-title">Tech stack:</span>
+                        {labelsFourth.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>

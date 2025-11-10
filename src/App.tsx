@@ -10,6 +10,8 @@ import {
 } from "./components";
 import FadeIn from './components/FadeIn';
 import './index.scss';
+import Achievements from './components/Achievements';
+
 
 function App() {
     const [mode, setMode] = useState<string>('light');
@@ -32,6 +34,7 @@ function App() {
         <FadeIn transitionDuration={700}>
             <Main/>
             <Expertise/>
+            <Achievements />
             <Timeline/>
             <Project/>
             <Contact/>
