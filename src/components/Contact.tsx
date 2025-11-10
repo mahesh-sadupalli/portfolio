@@ -25,7 +25,13 @@ function Contact() {
     setEmailError(email === '');
     setMessageError(message === '');
 
-    /* Uncomment below if you want to enable the emailJS */
+    /* Uncomment below if you want to enable emailJS functionality */
+    /* 
+    1. Sign up at https://www.emailjs.com/
+    2. Get your Service ID, Template ID, and Public Key
+    3. Replace 'service_id', 'template_id', and 'api_key' below
+    4. Uncomment the code
+    */
 
     // if (name !== '' && email !== '' && message !== '') {
     //   var templateParams = {
@@ -38,23 +44,32 @@ function Contact() {
     //   emailjs.send('service_id', 'template_id', templateParams, 'api_key').then(
     //     (response) => {
     //       console.log('SUCCESS!', response.status, response.text);
+    //       alert('Message sent successfully!');
     //     },
     //     (error) => {
     //       console.log('FAILED...', error);
+    //       alert('Failed to send message. Please try again.');
     //     },
     //   );
     //   setName('');
     //   setEmail('');
     //   setMessage('');
     // }
+
+    // Temporary solution: Open mailto link
+    if (name !== '' && email !== '' && message !== '') {
+      const subject = `Portfolio Contact from ${name}`;
+      const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+      window.location.href = `mailto:mahesh.sadupalli@gmail.com?subject=${subject}&body=${body}`;
+    }
   };
 
   return (
     <div id="contact">
       <div className="items-container">
         <div className="contact_wrapper">
-          <h1>Contact Me</h1>
-          <p>Got a project waiting to be realized? Let's collaborate and make it happen!</p>
+          <h1>Get In Touch</h1>
+          <p>Interested in collaboration on AI/ML research or have a project in mind? Let's connect! I'm open to research opportunities, consulting projects, and technical discussions.</p>
           <Box
             ref={form}
             component="form"
@@ -92,7 +107,7 @@ function Contact() {
               required
               id="outlined-multiline-static"
               label="Message"
-              placeholder="Send me any inquiries or questions"
+              placeholder="Tell me about your project or inquiry..."
               multiline
               rows={10}
               className="body-form"
@@ -101,10 +116,10 @@ function Contact() {
                 setMessage(e.target.value);
               }}
               error={messageError}
-              helperText={messageError ? "Please enter the message" : ""}
+              helperText={messageError ? "Please enter your message" : ""}
             />
             <Button variant="contained" endIcon={<SendIcon />} onClick={sendEmail}>
-              Send
+              Send Message
             </Button>
           </Box>
         </div>
