@@ -64,8 +64,8 @@ function Expertise() {
             <div className="skills-grid">
                 <div className="skill">
                     <FontAwesomeIcon icon={faBrain} size="3x"/>
-                    <h3>AI/ML & Data Science</h3>
-                    <p>Currently conducting Master's thesis research on neural network-based data compression at Rolls Royce, BTU, and TU Berlin, achieving 20-50x compression ratios. Developing multimodal deep learning models at Robert Koch Institute using PyTorch and Vision Transformers, integrating satellite imagery with sociodemographic data for healthcare predictions with F1 scores of 0.75-0.85.</p>
+                    <h3>AI & Data Science</h3>
+                    <p>Currently conducting Master's thesis research on neural network-based data compression in collaboration between Rolls Royce, BTU, and TU Berlin, aiming to achieve 20-50x compression ratios. And at RKI as a student assitant, invloved in project which developes multimodal deep learning models based on NeurIPS MedSat Dataset which integrates satellite imagery with sociodemographic data for healthcare predictions.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsFirst.map((label, index) => (
@@ -77,7 +77,7 @@ function Expertise() {
                 <div className="skill">
                     <FontAwesomeIcon icon={faCode} size="3x"/>
                     <h3>Programming & Data Engineering</h3>
-                    <p>Proficient in multiple programming languages with strong experience in data processing, database management, and building scalable data pipelines. Developed SQL databases for epidemiological research, conducted statistical analysis for healthcare studies, and built data processing systems for research and production environments.</p>
+                    <p>Proficient in multiple programming languages with strong experience in data processing, database management, and building scalable data pipelines. As a student assitant at RKI invloved in a Project HELoCo and my specific role is to integrate ICD10GM data with the Microsfot SQL Server and automate with ML Pipeline. </p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsSecond.map((label, index) => (

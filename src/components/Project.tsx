@@ -23,9 +23,9 @@ function Project() {
                 <p>Researched GANs/SRGAN/ESRGAN for image super-resolution using adaptive loss function optimization, achieving 15% improvement in training stability and 30% reduction in mode collapse. Developed deepfake detection framework achieving 94.2% accuracy with 0.85 F1-score on FaceForensics++ and DFDC datasets.</p>
             </div>
             <div className="project">
-                <a href="https://github.com/mahesh-sadupalli" target="_blank" rel="noreferrer"><img src={mock03} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/mahesh-sadupalli" target="_blank" rel="noreferrer"><h2>Neural Code Search with RAG Pipeline</h2></a>
-                <p>Developed neural code search system using contrastive learning and RAG architecture, achieving 0.78 MRR performance for matching requirements to SystemVerilog code files. Built LLM-integrated pipeline with domain-specific knowledge bases, achieving 80% bug detection accuracy in automated verification workflows.</p>
+                <a href="https://github.com/mahesh-sadupalli/knowledge-graphs-object-detection" target="_blank" rel="noreferrer"><img src={mock03} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://github.com/mahesh-sadupalli/knowledge-graphs-object-detection" target="_blank" rel="noreferrer"><h2>Object Detection using Knowledge Graphs</h2></a>
+                <p>This project demonstrates the integration of Knowledge Graphs with computer vision tasks, specifically object detection. The implementation showcases how semantic knowledge can enhance machine learning pipelines by providing structured, high-quality training data through SPARQL queries.</p>
             </div>
             <div className="project">
                 <a href="https://github.com/mahesh-sadupalli" target="_blank" rel="noreferrer"><img src={mock04} className="zoom" alt="thumbnail" width="100%"/></a>
