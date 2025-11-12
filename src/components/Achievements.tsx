@@ -30,13 +30,6 @@ function Achievements() {
                     <p className="achievement-type">Academic Contributions</p>
                     <p>Conducting cutting-edge research in neural network compression and multimodal deep learning, with ongoing work toward conference submissions including NeurIPS.</p>
                 </div>
-
-                <div className="achievement-card">
-                    <FontAwesomeIcon icon={faCertificate} size="3x" className="achievement-icon"/>
-                    <h3>Multi-Institutional Research</h3>
-                    <p className="achievement-type">Collaborative Excellence</p>
-                    <p>Successfully collaborating across multiple prestigious institutions including Rolls Royce, BTU Cottbus-Senftenberg, TU Berlin, Robert Koch Institute, and Friendship Systems.</p>
-                </div>
             </div>
         </div>
     </div>
