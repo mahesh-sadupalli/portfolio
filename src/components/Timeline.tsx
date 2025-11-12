@@ -66,10 +66,22 @@ function Timeline() {
               Statistical analysis for Namibian WHO health data, developed Krankenhaus (German hospital) data matching system, and analyzed pre-COVID healthcare worker datasets for epidemiological research insights.
             </p>
           </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="Apr 2018 - May 2021"
+            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h3 className="vertical-timeline-element-title">Cloud Engineer</h3>
+            <h4 className="vertical-timeline-element-subtitle">HPC Consulting Pvt Ltd, Delhi</h4>
+            <p>
+              AWS Infrastructure Management, Docker Containerization, Terraform IaC, CI/CD Pipeline Development with Jenkins, CloudWatch Monitoring, Prometheus Alerting. Maintained 99.8% uptime and reduced deployment time by 66%.
+            </p>
+          </VerticalTimelineElement>
 
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="Oct 2022 - Mar 2026 (Expected)"
+            date="Oct 2022 - Present"
             iconStyle={{ background: '#e91e63', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
@@ -81,7 +93,7 @@ function Timeline() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="Oct 2023 - Mar 2026"
+            date="Oct 2023 - Present"
             iconStyle={{ background: '#e91e63', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
@@ -105,22 +117,11 @@ function Timeline() {
             </p>
           </VerticalTimelineElement>
 
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="Apr 2018 - May 2021"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
-          >
-            <h3 className="vertical-timeline-element-title">Cloud Engineer</h3>
-            <h4 className="vertical-timeline-element-subtitle">HPC Consulting Pvt Ltd, Delhi</h4>
-            <p>
-              AWS Infrastructure Management, Docker Containerization, Terraform IaC, CI/CD Pipeline Development with Jenkins, CloudWatch Monitoring, Prometheus Alerting. Maintained 99.8% uptime and reduced deployment time by 66%.
-            </p>
-          </VerticalTimelineElement>
+          
 
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="Sept 2007 - Jun 2011"
+            
             iconStyle={{ background: '#e91e63', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >

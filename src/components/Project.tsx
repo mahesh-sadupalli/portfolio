@@ -25,7 +25,8 @@ function Project() {
             <div className="project">
                 <a href="https://github.com/mahesh-sadupalli/knowledge-graphs-object-detection" target="_blank" rel="noreferrer"><img src={mock03} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="https://github.com/mahesh-sadupalli/knowledge-graphs-object-detection" target="_blank" rel="noreferrer"><h2>Object Detection using Knowledge Graphs</h2></a>
-                <p>This project demonstrates the integration of Knowledge Graphs with computer vision tasks, specifically object detection. The implementation showcases how semantic knowledge can enhance machine learning pipelines by providing structured, high-quality training data through SPARQL queries.</p>
+                <p>Developed semantic object detection using PyTorch/MMDetection with SPARQL-based data curation, achieving 40% data
+  reduction while training FCOS detector on 139 KG-filtered cat/dog instances from COCO2017.</p>
             </div>
             <div className="project">
                 <a href="https://github.com/mahesh-sadupalli" target="_blank" rel="noreferrer"><img src={mock04} className="zoom" alt="thumbnail" width="100%"/></a>
