@@ -123,7 +123,7 @@ function Timeline() {
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
             <h3 className="vertical-timeline-element-title">UPSC Civil Services Examination</h3>
-            <h4 className="vertical-timeline-element-subtitle">Self-Study & Preparation, India</h4>
+            <h4 className="vertical-timeline-element-subtitle">Administrative Services, India</h4>
             <p>
               Dedicated preparation for the Union Public Service Commission (UPSC) Civil Services Examination, one of India's most competitive examinations. Rigorous interdisciplinary training in Science & Technology, Political Science, Anthropology, Sociology, Geography, History, Ethics, and International Relations. Cultivated advanced analytical thinking, policy research, and self-directed learning capabilities.
             </p>
