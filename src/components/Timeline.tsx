@@ -100,7 +100,7 @@ function Timeline() {
             <h3 className="vertical-timeline-element-title">Nebenhörerschaft</h3>
             <h4 className="vertical-timeline-element-subtitle">TU Berlin, Humboldt University Berlin</h4>
             <p>
-              Courses attended: Machine Learning, Deep Learning, Python for Machine Learning and Deep learning& NLP
+              Courses attended: Machine Learning, Deep Learning, Python for Machine Learning, Knowledge Graphs in AI and Deep learning& NLP
             </p>
           </VerticalTimelineElement>
 
