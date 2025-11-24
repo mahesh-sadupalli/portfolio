@@ -134,7 +134,7 @@ function Timeline() {
 
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="2010 - 2014"
+            
             iconStyle={{ background: '#e91e63', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
