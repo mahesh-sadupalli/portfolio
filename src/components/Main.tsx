@@ -18,7 +18,7 @@ function Main() {
             <a href="https://github.com/mahesh-sadupalli" target="_blank" rel="noreferrer"><GitHubIcon/></a>
             <a href="https://www.linkedin.com/in/mahesh-sadupalli/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
             <a href="mailto:mahesh.sadupalli@gmail.com" target="_blank" rel="noreferrer"><EmailIcon/></a>
-            <a href="https://blackforestde.medium.com/" target="_blank" rel="noreferrer"><MediumIcon/></a>
+            <a href="https://medium.com/@maheshsadupalli" target="_blank" rel="noreferrer"><MediumIcon/></a>
           </div>
           <h1>Mahesh Sadupalli</h1>
           <p>AI/Data science Engineer</p>
@@ -28,7 +28,7 @@ function Main() {
             <a href="https://github.com/mahesh-sadupalli" target="_blank" rel="noreferrer"><GitHubIcon/></a>
             <a href="https://www.linkedin.com/in/mahesh-sadupalli/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
             <a href="mailto:mahesh.sadupalli@gmail.com" target="_blank" rel="noreferrer"><EmailIcon/></a>
-            <a href="https://blackforestde.medium.com/" target="_blank" rel="noreferrer"><MediumIcon/></a>
+            <a href="https://medium.com/@maheshsadupalli" target="_blank" rel="noreferrer"><MediumIcon/></a>
           </div>
         </div>
       </div>
