@@ -13,8 +13,8 @@ function Achievements() {
                 <div className="achievement-card">
                     <FontAwesomeIcon icon={faTrophy} size="3x" className="achievement-icon"/>
                     <h3>EY Databeats Hackathon 2024</h3>
-                    <p className="achievement-type">Competition Winner</p>
-                    <p>Won the EY Databeats Hackathon 2024, demonstrating excellence in data science and AI problem-solving in a competitive environment.</p>
+                    <p className="achievement-type">Participant</p>
+                    <p>Participated in the EY Databeats Hackathon 2024, tackling real-world data science and AI challenges in a competitive environment.</p>
                 </div>
 
                 <div className="achievement-card">

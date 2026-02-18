@@ -1,7 +1,6 @@
 import React from "react";
 import mock01 from '../assets/images/mock01.png';
 import mock02 from '../assets/images/mock02.png';
-import mock03 from '../assets/images/mock03.png';
 import mock04 from '../assets/images/mock04.png';
 import mock05 from '../assets/images/mock05.png';
 import mock06 from '../assets/images/mock06.png';
@@ -13,20 +12,14 @@ function Project() {
         <h1>Research & Projects</h1>
         <div className="projects-grid">
             <div className="project">
-                <a href="https://github.com/mahesh-sadupalli" target="_blank" rel="noreferrer"><img src={mock01} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/mahesh-sadupalli" target="_blank" rel="noreferrer"><h2>Neural Network Data Compression</h2></a>
-                <p>Master's thesis research implementing fully connected autoencoders, Physics-Informed Neural Networks (PINNs), and Graph Neural Networks for industrial simulation data compression. Achieved 20-50x compression ratios with sub-1% reconstruction error and 80-90% memory footprint reduction.</p>
+                <a href="https://github.com/mahesh-sadupalli/master-thesis" target="_blank" rel="noreferrer"><img src={mock01} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://github.com/mahesh-sadupalli/master-thesis" target="_blank" rel="noreferrer"><h2>Concurrent Neural Network Training for Compression of Spatio-Temporal Data</h2></a>
+                <p>Master's thesis at BTU Cottbus-Senftenberg developing an in-situ neural network-based compression framework for streaming CFD simulation data. Trained coordinate-based MLPs mapping (x, y, z, t) to flow field variables, achieving compression ratios up to 27,208:1. Compared offline (batch) vs online (streaming) training, identifying catastrophic forgetting in temporal-window-based approaches.</p>
             </div>
             <div className="project">
                 <a href="https://github.com/mahesh-sadupalli/gan-artifact-detector" target="_blank" rel="noreferrer"><img src={mock02} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="https://github.com/mahesh-sadupalli/gan-artifact-detector" target="_blank" rel="noreferrer"><h2>GAN Optimization & Deepfake Detection</h2></a>
                 <p>Researched GANs/SRGAN/ESRGAN for image super-resolution using adaptive loss function optimization, achieving 15% improvement in training stability and 30% reduction in mode collapse. Developed deepfake detection framework achieving 94.2% accuracy with 0.85 F1-score on FaceForensics++ and DFDC datasets.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/mahesh-sadupalli/knowledge-graphs-object-detection" target="_blank" rel="noreferrer"><img src={mock03} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/mahesh-sadupalli/knowledge-graphs-object-detection" target="_blank" rel="noreferrer"><h2>Object Detection using Knowledge Graphs</h2></a>
-                <p>Developed semantic object detection using PyTorch/MMDetection with SPARQL-based data curation, achieving 40% data
-  reduction while training FCOS detector on 139 KG-filtered cat/dog instances from COCO2017.</p>
             </div>
             <div className="project">
                 <a href="https://github.com/mahesh-sadupalli" target="_blank" rel="noreferrer"><img src={mock04} className="zoom" alt="thumbnail" width="100%"/></a>
