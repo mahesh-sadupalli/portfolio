@@ -19,9 +19,9 @@ function Timeline() {
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">Master Thesis Research</h3>
-            <h4 className="vertical-timeline-element-subtitle">Rolls Royce | BTU Cottbus | TU Berlin | Friendship Systems</h4>
+            <h4 className="vertical-timeline-element-subtitle">BTU Cottbus-Senftenberg | FG Numerische Mathematik und Wissenschaftliches Rechnen</h4>
             <p>
-              Neural Network-Based Data Compression: Implementing autoencoders, Physics-Informed Neural Networks (PINNs), and Graph Neural Networks for industrial simulation data, targeting 20-50x compression ratios with sub-1% reconstruction error.
+              Concurrent Neural Network Training for Compression of Spatio-Temporal Data: Developing in-situ neural network-based compression for streaming CFD simulation data. Training coordinate-based MLPs to learn continuous field representations, achieving compression ratios up to 27,208:1. Comparing offline (batch) vs online (streaming) training paradigms and investigating catastrophic forgetting.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement

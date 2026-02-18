@@ -3,7 +3,6 @@ import mock01 from '../assets/images/mock01.png';
 import mock02 from '../assets/images/mock02.png';
 import mock04 from '../assets/images/mock04.png';
 import mock05 from '../assets/images/mock05.png';
-import mock06 from '../assets/images/mock06.png';
 import '../assets/styles/Project.scss';
 
 function Project() {
@@ -30,11 +29,6 @@ function Project() {
                 <a href="https://github.com/minalbansal14/Machine_Learning_Projects/tree/f44b832151368f35f78a5e1c3199b6709edcbf3d/Anomaly%20Detection" target="_blank" rel="noreferrer"><img src={mock05} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="https://github.com/minalbansal14/Machine_Learning_Projects/tree/f44b832151368f35f78a5e1c3199b6709edcbf3d/Anomaly%20Detection" target="_blank" rel="noreferrer"><h2>Anomaly Detection in Customer Data</h2></a>
                 <p>Implemented machine learning pipeline for anomaly detection at FU Berlin, utilizing data preprocessing techniques to reduce skewness from 11.11 to -0.73. Identified top 10 anomalies with isolation forest scoring (scores up to 56.41), demonstrating model evaluation and validation expertise.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/mahesh-sadupalli/adobe-image-processing-platform" target="_blank" rel="noreferrer"><img src={mock06} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/mahesh-sadupalli/adobe-image-processing-platform" target="_blank" rel="noreferrer"><h2>Enterprise Image Processing Platform</h2></a>
-                <p>Built enterprise-grade microservices platform using Java 17, Spring Boot 3.2, and Docker with Nginx load balancer. Implemented computer vision algorithms for edge detection, image filters, and smart resizing. Integrated AWS S3 cloud storage, PostgreSQL database, and Redis caching with production-ready RESTful APIs.</p>
             </div>
         </div>
     </div>
