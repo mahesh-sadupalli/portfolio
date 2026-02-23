@@ -8,7 +8,6 @@ import {
   Navigation,
   Footer,
 } from "./components";
-import FadeIn from './components/FadeIn';
 import './index.scss';
 import Achievements from './components/Achievements';
 
@@ -30,15 +29,18 @@ function App() {
 
     return (
     <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
+        {/* Floating background decorations */}
+        <div className="float-decoration blob-1" />
+        <div className="float-decoration blob-2" />
+        <div className="float-decoration blob-3" />
+
         <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
-        <FadeIn transitionDuration={700}>
-            <Main/>
-            <Expertise/>
-            <Achievements />
-            <Timeline/>
-            <Project/>
-            <Contact/>
-        </FadeIn>
+        <Main/>
+        <Expertise/>
+        <Achievements />
+        <Timeline/>
+        <Project/>
+        <Contact/>
         <Footer />
     </div>
     );

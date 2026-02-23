@@ -1,85 +1,181 @@
-.skills-container {
-    padding: 5% 10%;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+// ─── Expertise Section ──────────────────────
+.expertise-section {
+  position: relative;
+  padding: 6rem 0;
+  background: var(--bg-section-alt);
+}
 
-    svg {
-        color: white;
+.expertise-inner {
+  padding: 0 12%;
+
+  .expertise-heading {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0 0 3rem 0;
+    letter-spacing: -0.03em;
+  }
+}
+
+// ─── Bento Grid ─────────────────────────────
+.expertise-bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.bento-card {
+  &.bento-featured {
+    grid-column: span 2;
+  }
+}
+
+.bento-card-inner {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  height: 100%;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  overflow: hidden;
+
+  // Subtle gradient shine on hover
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--accent-light), transparent);
+    transition: left 0.6s ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--card-shadow-hover);
+    border-color: var(--accent-light);
+
+    &::before {
+      left: 100%;
     }
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1.25rem 0 0.75rem;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    margin: 0 0 1.25rem;
+  }
 }
-  
-.skills-container .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
+
+// ─── Icon ───────────────────────────────────
+.bento-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent-light), var(--accent-glow));
+  transition: transform 0.3s ease;
+
+  svg {
+    font-size: 1.2rem !important;
+    color: var(--accent) !important;
+  }
 }
-  
-.skills-container .skills-grid .skill {
-    align-items: center;
-    text-align: left;
+
+.bento-card-inner:hover .bento-icon {
+  transform: scale(1.1) rotate(-5deg);
 }
-  
+
+// ─── Chips ──────────────────────────────────
 .chip {
-    color: rgb(39, 40, 34) !important;
-    background-color: white !important;
-    font-size: 0.8rem !important;
-    height: 25px !important;
-  
-    span {
-        font-family: 'Courier Prime', monospace;
-        color: rgb(39, 40, 34);
-    }
-  
-    svg {
-        height: 15px !important;
-    }
+  font-family: var(--font-mono) !important;
+  font-size: 0.72rem !important;
+  font-weight: 500 !important;
+  height: 28px !important;
+  background-color: var(--chip-bg) !important;
+  color: var(--chip-text) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  transition: all 0.25s ease !important;
+  cursor: default;
+
+  &:hover {
+    background-color: var(--accent-light) !important;
+    color: var(--accent) !important;
+    transform: translateY(-1px);
+  }
+
+  span {
+    font-family: var(--font-mono);
+    color: inherit;
+    padding: 0 10px;
+  }
 }
 
 .flex-chips {
-    line-height: 2;
-    margin: 0.5;
+  line-height: 2.2;
 
-    .chip-title {
-        color: white;
-        padding-right: 10px;
-    }
+  .chip-title {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    padding-right: 8px;
+  }
 }
 
 .flex-chips .MuiChip-root {
-    margin-right: 0.5em;
+  margin-right: 0.4em;
+  margin-bottom: 0.25em;
 }
 
-.flex-chips .MuiChip-outlined {
-    background-color: #e0e0e0;
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+// ─── Responsive ─────────────────────────────
+@media screen and (max-width: 1024px) {
+  .expertise-bento {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bento-card.bento-featured {
+    grid-column: span 1;
+  }
 }
 
-.flex-chips .MuiChip-outlined span {
-    color: rgb(39, 40, 34);
-}
+@media screen and (max-width: 768px) {
+  .expertise-section {
+    padding: 4rem 0;
+  }
 
-@media screen {
-    @media (max-width: 768px) {
-        .skills-container {
-            display: block;
-            padding-left: 5%;
-            padding-right: 5%;
-        }
-    
-        .skills-container .skills-grid {
-            display: initial;
-        }
-        
-        .skills-container .skills-grid .skill {
-            padding-bottom: 5%;
-        }
+  .expertise-inner {
+    padding: 0 5%;
+
+    .expertise-heading {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
     }
+  }
 
-    @media (max-width: 567px) {
-        .skills {
-            font-size: 12px;
-        }
-    }
+  .expertise-bento {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .bento-card-inner {
+    padding: 1.5rem;
+  }
 }

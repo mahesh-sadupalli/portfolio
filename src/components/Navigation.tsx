@@ -16,7 +16,7 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 
-const drawerWidth = 240;
+const drawerWidth = 280;
 const navItems = [['Expertise', 'expertise'], ['Achievements', 'achievements'], ['History', 'history'], ['Projects', 'projects'], ['Contact', 'contact']];
 
 function Navigation({parentToChild, modeChange}: any) {
@@ -32,28 +32,17 @@ function Navigation({parentToChild, modeChange}: any) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const navbar = document.getElementById("navigation");
-      if (navbar) {
-        const scrolled = window.scrollY > navbar.clientHeight;
-        setScrolled(scrolled);
-      }
+      setScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToSection = (section: string) => {
-    console.log(section)
-    const expertiseElement = document.getElementById(section);
-    if (expertiseElement) {
-      expertiseElement.scrollIntoView({ behavior: 'smooth' });
-      console.log('Scrolling to:', expertiseElement);  // Debugging: Ensure the element is found
-    } else {
-      console.error('Element with id "expertise" not found');  // Debugging: Log error if element is not found
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -64,8 +53,16 @@ function Navigation({parentToChild, modeChange}: any) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item[0]} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }} onClick={() => scrollToSection(item[1])}>
-              <ListItemText primary={item[0]} />
+            <ListItemButton sx={{ textAlign: 'center', py: 1.5 }} onClick={() => scrollToSection(item[1])}>
+              <ListItemText
+                primary={item[0]}
+                primaryTypographyProps={{
+                  fontFamily: 'var(--font-body)',
+                  fontWeight: 500,
+                  fontSize: '0.95rem',
+                  letterSpacing: '0.01em'
+                }}
+              />
             </ListItemButton>
           </ListItem>
         ))}
@@ -76,25 +73,68 @@ function Navigation({parentToChild, modeChange}: any) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" id="navigation" className={`navbar-fixed-top${scrolled ? ' scrolled' : ''}`}>
-        <Toolbar className='navigation-bar'>
+      <AppBar
+        component="nav"
+        id="navigation"
+        elevation={0}
+        sx={{
+          backgroundColor: scrolled ? 'var(--nav-bg)' : 'transparent',
+          backdropFilter: scrolled ? 'blur(20px) saturate(180%)' : 'none',
+          borderBottom: scrolled ? '1px solid var(--nav-border)' : '1px solid transparent',
+          transition: 'all 0.35s ease',
+        }}
+      >
+        <Toolbar className='navigation-bar' sx={{ minHeight: '64px !important' }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: 'none' }, color: 'var(--text-primary)' }}
           >
             <MenuIcon />
           </IconButton>
-          {mode === 'dark' ? (
-            <LightModeIcon onClick={() => modeChange()}/>
-          ) : (
-            <DarkModeIcon onClick={() => modeChange()}/>
-          )}
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box
+            onClick={() => modeChange()}
+            sx={{
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              padding: '6px',
+              borderRadius: '8px',
+              transition: 'background-color 0.25s ease',
+              '&:hover': {
+                backgroundColor: 'var(--accent-subtle)',
+              }
+            }}
+          >
+            {mode === 'dark' ? (
+              <LightModeIcon sx={{ fontSize: '1.2rem', color: 'var(--text-primary)' }} />
+            ) : (
+              <DarkModeIcon sx={{ fontSize: '1.2rem', color: 'var(--text-primary)' }} />
+            )}
+          </Box>
+          <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: '4px' }}>
             {navItems.map((item) => (
-              <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: '#fff' }}>
+              <Button
+                key={item[0]}
+                onClick={() => scrollToSection(item[1])}
+                sx={{
+                  color: 'var(--text-primary)',
+                  fontFamily: 'var(--font-body)',
+                  fontWeight: 500,
+                  fontSize: '0.875rem',
+                  textTransform: 'none',
+                  padding: '6px 16px',
+                  borderRadius: '6px',
+                  letterSpacing: '0.01em',
+                  transition: 'all 0.25s ease',
+                  '&:hover': {
+                    backgroundColor: 'var(--accent-subtle)',
+                    color: 'var(--accent)',
+                  }
+                }}
+              >
                 {item[0]}
               </Button>
             ))}
@@ -106,12 +146,15 @@ function Navigation({parentToChild, modeChange}: any) {
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
+          ModalProps={{ keepMounted: true }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .MuiDrawer-paper': {
+              boxSizing: 'border-box',
+              width: drawerWidth,
+              backgroundColor: 'var(--bg-primary)',
+              borderRight: '1px solid var(--border)',
+            },
           }}
         >
           {drawer}

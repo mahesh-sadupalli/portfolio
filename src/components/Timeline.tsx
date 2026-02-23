@@ -4,18 +4,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import ScrollReveal from './ScrollReveal';
 import '../assets/styles/Timeline.scss'
+
+const workColor = '#4A7CFF';
+const eduColor = '#8B5CF6';
 
 function Timeline() {
   return (
-    <div id="history">
-      <div className="items-container">
-        <h1>Career & Education Timeline</h1>
-        <VerticalTimeline>
+    <div id="history" className="timeline-wrapper">
+      <div className="items-container timeline-section">
+        <ScrollReveal>
+          <span className="section-label">My Journey</span>
+          <h1 className="timeline-heading">Career & Education</h1>
+        </ScrollReveal>
+        <VerticalTimeline lineColor="var(--border)">
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2025 - Present"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            date="2025 — Present"
+            iconStyle={{ background: workColor, color: '#fff' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">Master Thesis Research</h3>
@@ -26,13 +33,11 @@ function Timeline() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
-            contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="Oct 2025 - Present"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            date="Oct 2025 — Present"
+            iconStyle={{ background: workColor, color: '#fff' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Student Assistant - Data Engineering</h3>
+            <h3 className="vertical-timeline-element-title">Student Assistant — Data Engineering</h3>
             <h4 className="vertical-timeline-element-subtitle">FG33, Robert Koch Institute, Berlin</h4>
             <p>
               Project HELoCO: ICD-10-GM code integration with Microsoft SQL Server, developing automated ML pipelines for German diagnosis code standardization and epidemiological data processing.
@@ -41,26 +46,24 @@ function Timeline() {
 
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="May 2025 - June 2025"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            date="May 2025 — June 2025"
+            iconStyle={{ background: workColor, color: '#fff' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Student Assistant - Computer Vision</h3>
-            <h4 className="vertical-timeline-element-subtitle">Robert Koch Institute - Zentrum für Künstliche Intelligenz in der Public Health, Wildau</h4>
+            <h3 className="vertical-timeline-element-title">Student Assistant — Computer Vision</h3>
+            <h4 className="vertical-timeline-element-subtitle">Robert Koch Institute — Zentrum für Künstliche Intelligenz in der Public Health, Wildau</h4>
             <p>
               NeurIPS MedSat Challenge: Involved in a project multimodal deep learning models integrating satellite imagery with healthcare data using computer vision and geospatial analysis techniques for public health predictions.
             </p>
           </VerticalTimelineElement>
 
-
-
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="Nov 2024 - Sept 2025"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            date="Nov 2024 — Sept 2025"
+            iconStyle={{ background: workColor, color: '#fff' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Student Assistant - Data Analysis</h3>
+            <h3 className="vertical-timeline-element-title">Student Assistant — Data Analysis</h3>
             <h4 className="vertical-timeline-element-subtitle">FG37, Robert Koch Institute, Berlin</h4>
             <p>
               Statistical analysis for Namibian WHO health data, developed Krankenhaus (German hospital) data matching system, and analyzed pre-COVID healthcare worker datasets for epidemiological research insights.
@@ -68,8 +71,8 @@ function Timeline() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="Apr 2018 - May 2021"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            date="Apr 2018 — May 2021"
+            iconStyle={{ background: workColor, color: '#fff' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">Cloud Engineer</h3>
@@ -81,8 +84,8 @@ function Timeline() {
 
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="Oct 2022 - Present"
-            iconStyle={{ background: '#e91e63', color: 'rgb(39, 40, 34)' }}
+            date="Oct 2022 — Present"
+            iconStyle={{ background: eduColor, color: '#fff' }}
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
             <h3 className="vertical-timeline-element-title">M.Sc. Artificial Intelligence</h3>
@@ -93,8 +96,8 @@ function Timeline() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="Oct 2023 - Present"
-            iconStyle={{ background: '#e91e63', color: 'rgb(39, 40, 34)' }}
+            date="Oct 2023 — Present"
+            iconStyle={{ background: eduColor, color: '#fff' }}
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
             <h3 className="vertical-timeline-element-title">Nebenhörerschaft</h3>
@@ -106,8 +109,8 @@ function Timeline() {
 
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="Sept 2023 - Aug 2027 (Expected)"
-            iconStyle={{ background: '#e91e63', color: 'rgb(39, 40, 34)' }}
+            date="Sept 2023 — Aug 2027 (Expected)"
+            iconStyle={{ background: eduColor, color: '#fff' }}
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
             <h3 className="vertical-timeline-element-title">BS Data Science</h3>
@@ -118,8 +121,8 @@ function Timeline() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="2014 - 2020"
-            iconStyle={{ background: '#e91e63', color: 'rgb(39, 40, 34)' }}
+            date="2014 — 2020"
+            iconStyle={{ background: eduColor, color: '#fff' }}
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
             <h3 className="vertical-timeline-element-title">UPSC Civil Services Examination</h3>
@@ -128,14 +131,10 @@ function Timeline() {
               Dedicated preparation for the Union Public Service Commission (UPSC) Civil Services Examination, one of India's most competitive examinations. Rigorous interdisciplinary training in Science & Technology, Political Science, Anthropology, Sociology, Geography, History, Ethics, and International Relations. Cultivated advanced analytical thinking, policy research, and self-directed learning capabilities.
             </p>
           </VerticalTimelineElement>
-          
-
-          
 
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            
-            iconStyle={{ background: '#e91e63', color: 'rgb(39, 40, 34)' }}
+            iconStyle={{ background: eduColor, color: '#fff' }}
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
             <h3 className="vertical-timeline-element-title">B.Tech. Electronics & Communication</h3>
