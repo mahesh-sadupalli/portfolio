@@ -28,7 +28,7 @@ function Timeline() {
             <h3 className="vertical-timeline-element-title">Master Thesis Research</h3>
             <h4 className="vertical-timeline-element-subtitle">BTU Cottbus-Senftenberg | FG Numerische Mathematik und Wissenschaftliches Rechnen</h4>
             <p>
-              Concurrent Neural Network Training for Compression of Spatio-Temporal Data: Developing in-situ neural network-based compression for streaming CFD simulation data. Training coordinate-based MLPs to learn continuous field representations, achieving compression ratios up to 27,208:1. Comparing offline (batch) vs online (streaming) training paradigms and investigating catastrophic forgetting.
+              Concurrent Neural Network Training for Compression of Spatio-Temporal Data: Developing in-situ neural network-based compression for streaming CFD simulation data. Training coordinate-based MLPs to learn continuous field representations, achieving compression ratios up to 4,733:1. Comparing offline (batch) vs online (streaming) training paradigms and investigating catastrophic forgetting.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
