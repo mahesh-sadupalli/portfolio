@@ -6,9 +6,10 @@
   .timeline-heading {
     font-family: var(--font-display);
     font-size: 2.8rem;
-    font-weight: 700;
+    font-weight: 800;
     margin: 0 0 2rem 0;
-    letter-spacing: -0.03em;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
   }
 }
 
@@ -30,7 +31,7 @@
 
   &:hover {
     box-shadow: var(--card-shadow-hover) !important;
-    border-color: transparent !important;
+    border-color: var(--accent) !important;
     transform: translateY(-3px);
   }
 }
@@ -60,7 +61,7 @@
 .vertical-timeline-element h3 {
   font-family: var(--font-display) !important;
   font-size: 1.15rem !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   color: var(--text-primary) !important;
   margin: 0 0 0.3rem 0 !important;
   letter-spacing: -0.01em;

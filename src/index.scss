@@ -1,42 +1,35 @@
 // ═══════════════════════════════════════════════
-// Design System: Floating Depth — Soft Blue 3D Cards
-// Inspired by modern case study presentations
+// Design System: MLU-Explain Inspired — Warm Editorial
+// Bold typography, coral accents, warm gradient backgrounds
 // ═══════════════════════════════════════════════
 
 :root {
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', 'Courier New', monospace;
 
-  --blue-50: #EEF2FF;
-  --blue-100: #E0E7FF;
-  --blue-200: #C7D2FE;
-  --blue-400: #818CF8;
-  --blue-500: #4A7CFF;
-  --blue-600: #3B63CC;
-  --blue-700: #3730A3;
-
-  --bg-primary: #F4F7FE;
+  --bg-primary: #FDF6F3;
   --bg-secondary: #FFFFFF;
-  --bg-hero: linear-gradient(135deg, #E8EEFF 0%, #F4F7FE 40%, #FAFBFF 100%);
-  --bg-section-alt: linear-gradient(180deg, #F4F7FE 0%, #EDF1FF 100%);
-  --text-primary: #1E293B;
-  --text-secondary: #64748B;
-  --text-tertiary: #94A3B8;
-  --accent: #4A7CFF;
-  --accent-hover: #3B63CC;
-  --accent-light: rgba(74, 124, 255, 0.08);
-  --accent-glow: rgba(74, 124, 255, 0.15);
-  --border: #E2E8F0;
-  --border-light: #F1F5F9;
+  --bg-hero: linear-gradient(135deg, rgba(247, 152, 128, 0.2) 0%, #FDF6F3 40%, rgba(252, 106, 73, 0.08) 100%);
+  --bg-section-alt: linear-gradient(180deg, rgba(247, 152, 128, 0.12) 0%, #FDF6F3 100%);
+  --bg-warm-gradient: linear-gradient(180deg, rgba(247, 152, 128, 0.15) 0%, rgba(252, 106, 73, 0.05) 50%, #FDF6F3 100%);
+  --text-primary: #232F3E;
+  --text-secondary: #4A5568;
+  --text-tertiary: #8896A6;
+  --accent: #FC6A49;
+  --accent-hover: #E5593B;
+  --accent-light: rgba(252, 106, 73, 0.08);
+  --accent-glow: rgba(252, 106, 73, 0.15);
+  --border: #E8DDD8;
+  --border-light: #F3EDE9;
   --card-bg: #FFFFFF;
-  --card-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 4px 12px rgba(15, 23, 42, 0.04);
-  --card-shadow-hover: 0 20px 60px rgba(15, 23, 42, 0.1), 0 4px 16px rgba(15, 23, 42, 0.06);
-  --card-shadow-float: 0 25px 80px rgba(15, 23, 42, 0.12), 0 8px 24px rgba(15, 23, 42, 0.06);
-  --nav-bg: rgba(244, 247, 254, 0.85);
-  --nav-border: rgba(226, 232, 240, 0.8);
-  --chip-bg: #EEF2FF;
-  --chip-text: #4338CA;
+  --card-shadow: 0 1px 3px rgba(35, 47, 62, 0.04), 0 4px 12px rgba(35, 47, 62, 0.04);
+  --card-shadow-hover: 0 20px 60px rgba(35, 47, 62, 0.1), 0 4px 16px rgba(35, 47, 62, 0.06);
+  --card-shadow-float: 0 25px 80px rgba(35, 47, 62, 0.12), 0 8px 24px rgba(35, 47, 62, 0.06);
+  --nav-bg: rgba(253, 246, 243, 0.85);
+  --nav-border: rgba(232, 221, 216, 0.8);
+  --chip-bg: rgba(252, 106, 73, 0.08);
+  --chip-text: #D4533A;
 }
 
 // ─── Global Reset & Base ────────────────────
@@ -78,7 +71,7 @@ a:hover {
 h1, h2, h3, h4, h5 {
   font-family: var(--font-display);
   color: var(--text-primary);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
 }
 
@@ -104,6 +97,51 @@ code {
   display: inline-block;
 }
 
+// ─── MLU-Style Button ───────────────────────
+.mlu-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--card-bg);
+  border: 2px solid var(--text-primary);
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: -4px;
+    bottom: -4px;
+    background: var(--accent);
+    border-radius: 6px;
+    z-index: -1;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  &:hover {
+    transform: translate(2px, 2px);
+    color: var(--text-primary);
+
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
 // ─── Floating Background Decorations ────────
 .float-decoration {
   position: absolute;
@@ -114,7 +152,7 @@ code {
   &.blob-1 {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(74, 124, 255, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(252, 106, 73, 0.08) 0%, transparent 70%);
     top: -100px;
     right: -150px;
     animation: floatSlow 20s ease-in-out infinite;
@@ -123,7 +161,7 @@ code {
   &.blob-2 {
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.06) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(247, 152, 128, 0.06) 0%, transparent 70%);
     bottom: 200px;
     left: -100px;
     animation: floatSlow 25s ease-in-out infinite reverse;
@@ -132,7 +170,7 @@ code {
   &.blob-3 {
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(74, 124, 255, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(252, 106, 73, 0.05) 0%, transparent 70%);
     top: 50%;
     right: 10%;
     animation: floatSlow 18s ease-in-out infinite 5s;
@@ -268,27 +306,28 @@ code {
 
 // ─── Dark Mode ──────────────────────────────
 .dark-mode {
-  --bg-primary: #0F172A;
-  --bg-secondary: #1E293B;
-  --bg-hero: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
-  --bg-section-alt: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
+  --bg-primary: #1A2332;
+  --bg-secondary: #232F3E;
+  --bg-hero: linear-gradient(135deg, #1A2332 0%, #232F3E 50%, #1A2332 100%);
+  --bg-section-alt: linear-gradient(180deg, #1A2332 0%, #232F3E 100%);
+  --bg-warm-gradient: linear-gradient(180deg, #1A2332 0%, #232F3E 100%);
   --text-primary: #E2E8F0;
   --text-secondary: #94A3B8;
   --text-tertiary: #64748B;
-  --accent: #818CF8;
-  --accent-hover: #A5B4FC;
-  --accent-light: rgba(129, 140, 248, 0.1);
-  --accent-glow: rgba(129, 140, 248, 0.2);
+  --accent: #FC6A49;
+  --accent-hover: #FF8066;
+  --accent-light: rgba(252, 106, 73, 0.1);
+  --accent-glow: rgba(252, 106, 73, 0.2);
   --border: #334155;
-  --border-light: #1E293B;
-  --card-bg: #1E293B;
+  --border-light: #232F3E;
+  --card-bg: #232F3E;
   --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
   --card-shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.2);
   --card-shadow-float: 0 25px 80px rgba(0, 0, 0, 0.4);
-  --nav-bg: rgba(15, 23, 42, 0.85);
+  --nav-bg: rgba(26, 35, 50, 0.85);
   --nav-border: rgba(51, 65, 85, 0.8);
-  --chip-bg: rgba(129, 140, 248, 0.1);
-  --chip-text: #A5B4FC;
+  --chip-bg: rgba(252, 106, 73, 0.1);
+  --chip-text: #FF8066;
 
   background-color: var(--bg-primary);
 
@@ -343,13 +382,23 @@ code {
 
   .float-decoration {
     &.blob-1 {
-      background: radial-gradient(circle, rgba(129, 140, 248, 0.06) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(252, 106, 73, 0.06) 0%, transparent 70%);
     }
     &.blob-2 {
-      background: radial-gradient(circle, rgba(99, 102, 241, 0.04) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(247, 152, 128, 0.04) 0%, transparent 70%);
     }
     &.blob-3 {
-      background: radial-gradient(circle, rgba(129, 140, 248, 0.04) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(252, 106, 73, 0.04) 0%, transparent 70%);
+    }
+  }
+
+  .mlu-button {
+    color: var(--text-primary);
+    background: var(--card-bg);
+    border-color: var(--text-primary);
+
+    &:hover {
+      color: var(--text-primary);
     }
   }
 
