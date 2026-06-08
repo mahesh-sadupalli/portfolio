@@ -131,13 +131,14 @@ function Contact() {
                     backgroundColor: 'var(--accent)',
                     color: '#fff',
                     padding: '12px 32px',
-                    borderRadius: '12px',
+                    borderRadius: '6px',
                     letterSpacing: '0.01em',
+                    border: '2px solid var(--text-primary)',
                     transition: 'all 0.3s cubic-bezier(0.23, 1, 0.32, 1)',
                     '&:hover': {
                       backgroundColor: 'var(--accent-hover)',
                       transform: 'translateY(-2px)',
-                      boxShadow: '0 8px 24px rgba(74, 124, 255, 0.25)',
+                      boxShadow: '0 4px 12px rgba(252, 106, 73, 0.3)',
                     },
                   }}
                 >
