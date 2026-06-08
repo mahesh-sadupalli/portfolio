@@ -3,7 +3,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import MediumIcon from './MediumIcon';
 import '../assets/styles/Footer.scss'
 
 function Footer() {
@@ -20,12 +19,11 @@ function Footer() {
             <a href="https://www.linkedin.com/in/mahesh-sadupalli/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><LinkedInIcon/></a>
             <a href="mailto:mahesh.sadupalli@gmail.com" target="_blank" rel="noreferrer" aria-label="Email"><EmailIcon/></a>
             <a href="https://www.instagram.com/blackforesttlabs/" target="_blank" rel="noreferrer" aria-label="Instagram"><InstagramIcon/></a>
-            <a href="https://blackforestde.medium.com/" target="_blank" rel="noreferrer" aria-label="Medium"><MediumIcon/></a>
           </div>
         </div>
         <div className="footer-divider" />
         <div className="footer-bottom">
-          <p>&copy; 2025 Mahesh Sadupalli. All rights reserved.</p>
+          <p>&copy; 2026 Mahesh Sadupalli. All rights reserved.</p>
           <p className="footer-built">Built with React & TypeScript</p>
         </div>
       </div>

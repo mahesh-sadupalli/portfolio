@@ -3,7 +3,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import MediumIcon from './MediumIcon';
 import '../assets/styles/Main.scss';
 
 function Main() {
@@ -29,18 +28,17 @@ function Main() {
           <div className="hero-main">
             <div className="hero-text">
               <h1>
-                <span className="hero-line hero-line-1">Mahesh</span>
-                <span className="hero-line hero-line-2">Sadupalli</span>
+                <span className="hero-line hero-line-1">MAHESH</span>
+                <span className="hero-line hero-line-2">SADUPALLI</span>
               </h1>
               <p className="hero-title">AI / Data Science <em>Engineer</em></p>
-              <p className="hero-education">M.Sc. AI @ BTU Cottbus-Senftenberg<br/>BS Data Science @ IIT Madras</p>
+              <p className="hero-education">M.Sc. Artificial Intelligence @ BTU Cottbus-Senftenberg<br/>Visiting Student @ TU Berlin (Machine Learning, Deep Learning, Python for ML)<br/>BS Data Science @ IIT Madras</p>
             </div>
 
             <div className="hero-image-block">
               <div className="hero-image-wrapper">
                 <img src="https://github.com/mahesh-sadupalli.png" alt="Mahesh Sadupalli" />
               </div>
-              <div className="hero-image-accent" />
             </div>
           </div>
 
@@ -50,7 +48,6 @@ function Main() {
               <a href="https://www.linkedin.com/in/mahesh-sadupalli/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><LinkedInIcon/></a>
               <a href="mailto:mahesh.sadupalli@gmail.com" target="_blank" rel="noreferrer" aria-label="Email"><EmailIcon/></a>
               <a href="https://www.instagram.com/blackforesttlabs/" target="_blank" rel="noreferrer" aria-label="Instagram"><InstagramIcon/></a>
-              <a href="https://medium.com/@maheshsadupalli" target="_blank" rel="noreferrer" aria-label="Medium"><MediumIcon/></a>
             </div>
             <div className="hero-scroll-hint">
               <span>Scroll to explore</span>
