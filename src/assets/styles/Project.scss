@@ -9,9 +9,10 @@
   .projects-heading {
     font-family: var(--font-display);
     font-size: 2.8rem;
-    font-weight: 700;
+    font-weight: 800;
     margin: 0 0 3rem 0;
-    letter-spacing: -0.03em;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
   }
 }
 
@@ -41,7 +42,7 @@
 
   &:hover {
     box-shadow: var(--card-shadow-float);
-    border-color: transparent;
+    border-color: var(--accent);
   }
 
   // Different 3D tilt for each card
@@ -56,6 +57,9 @@
   }
   &.project-card-3:hover {
     transform: rotateY(3deg) rotateX(-2deg) translateY(-10px) scale(1.02);
+  }
+  &.project-card-4:hover {
+    transform: rotateY(-4deg) rotateX(2deg) translateY(-10px) scale(1.02);
   }
 }
 
@@ -75,7 +79,7 @@
   .project-card-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, transparent 30%, rgba(15, 23, 42, 0.7) 100%);
+    background: linear-gradient(180deg, transparent 30%, rgba(35, 47, 62, 0.7) 100%);
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -141,7 +145,7 @@
   h2 {
     font-family: var(--font-display);
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 700;
     margin: 0 0 0.6rem;
     letter-spacing: -0.01em;
     line-height: 1.35;
@@ -159,6 +163,16 @@
 
 .project-card:hover .project-card-body h2 {
   color: var(--accent);
+}
+
+// ─── MLU-Style View Button ──────────────────
+.project-card-footer {
+  padding: 0 1.75rem 1.75rem;
+
+  .mlu-button {
+    font-size: 0.82rem;
+    padding: 8px 20px;
+  }
 }
 
 // ─── Responsive ─────────────────────────────

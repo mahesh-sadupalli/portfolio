@@ -1,6 +1,7 @@
 import React from "react";
 import mock01 from '../assets/images/mock01.png';
 import mock02 from '../assets/images/mock02.png';
+import mock03 from '../assets/images/mock03.png';
 import mock04 from '../assets/images/mock04.png';
 import mock05 from '../assets/images/mock05.png';
 import ScrollReveal from './ScrollReveal';
@@ -11,29 +12,36 @@ const projects = [
         image: mock01,
         link: "https://github.com/mahesh-sadupalli/master-thesis",
         title: "Concurrent Neural Network Training for Compression of Spatio-Temporal Data",
-        description: "Master's thesis at BTU Cottbus-Senftenberg developing an in-situ neural network-based compression framework for streaming CFD simulation data. Trained coordinate-based MLPs mapping (x, y, z, t) to flow field variables, achieving compression ratios up to 27,208:1.",
-        tags: ["PyTorch", "Neural Networks", "CFD"]
+        description: "Master's thesis at BTU Cottbus-Senftenberg developing an in-situ neural compression framework for streaming CFD data (vortex-shedding case, 300 timesteps, ~7.9M spatio-temporal samples). A coordinate-based INR reaches 35.72 dB PSNR at 1,234:1 offline and streams concurrently with the simulation at up to 4,733:1. Quantified catastrophic forgetting in online training — full-dataset PSNR collapses to ~15 dB — and recovered +7.58 dB (15.22 → 22.80 dB) with Experience Replay.",
+        tags: ["PyTorch", "Implicit Neural Representations", "Continual Learning", "CFD"]
+    },
+    {
+        image: mock03,
+        link: "https://github.com/mahesh-sadupalli/moe-transformer-pallas",
+        title: "10M-Parameter MoE Transformer with Custom Pallas Kernel",
+        description: "A ~10M-parameter Mixture-of-Experts transformer built from scratch in JAX and trained end-to-end — top-k routing, expert dispatch/combine, and an auxiliary load-balancing loss. A custom Pallas kernel fuses the MoE hot path (gating → dispatch → expert matmul → combine) for a measurable speedup over the baseline. Covers the full stack from tokenization and attention to MoE routing, the optimizer and training loop, plus the scaling math behind compute / memory / communication tradeoffs.",
+        tags: ["JAX", "Mixture-of-Experts", "Pallas Kernel", "From Scratch", "LLM"]
     },
     {
         image: mock02,
-        link: "https://github.com/mahesh-sadupalli/gan-artifact-detector",
-        title: "GAN Optimization & Deepfake Detection",
-        description: "Researched GANs/SRGAN/ESRGAN for image super-resolution using adaptive loss function optimization, achieving 15% improvement in training stability and 30% reduction in mode collapse. Developed deepfake detection framework achieving 94.2% accuracy.",
-        tags: ["GANs", "Computer Vision", "Deep Learning"]
+        link: "https://github.com/mahesh-sadupalli/ai-generated-media-detector",
+        title: "AI-Generated Media Detector",
+        description: "Compression-aware deepfake detection system with a dedicated Flux (Black Forest Labs) detector targeting MMDiT transformer artifacts — attention uniformity, flow matching residuals, and spectral fingerprints. Standard diffusion detectors achieve only 18-30% accuracy on Flux since U-Net-specific artifacts don't exist in transformer architectures. Uses FFT frequency-domain analysis, GLCM/LBP texture features, and explicit compression estimation to classify media as REAL, GAN-GENERATED, or DIFFUSION-GENERATED.",
+        tags: ["Deepfake Detection", "Flux", "FFT", "Computer Vision", "Compression"]
     },
     {
         image: mock04,
-        link: "https://github.com/mahesh-sadupalli",
-        title: "Multimodal Deep Learning for Healthcare",
-        description: "Developing multimodal deep learning models at Robert Koch Institute using PyTorch, progressing from CNN baselines to Vision Transformers. Integrating satellite imagery with sociodemographic data for healthcare prediction tasks, achieving F1 scores of 0.75-0.85.",
-        tags: ["Vision Transformers", "Healthcare AI", "PyTorch"]
+        link: "https://github.com/mahesh-sadupalli/ml-projects/tree/main/multimodal-medsat",
+        title: "Multimodal Deep Learning for Medical Prescription Prediction",
+        description: "Predicts medical prescription prevalence across 33,755 areas in England by fusing Sentinel-2 satellite imagery with sociodemographic data using cross-attention multimodal learning. Exceeds MedSat (NeurIPS 2023) baselines by +66% average — Depression R²=0.806, Opioids R²=0.794, Diabetes R²=0.654.",
+        tags: ["Cross-Attention Fusion", "Satellite Imagery", "Healthcare AI", "PyTorch"]
     },
     {
         image: mock05,
-        link: "https://github.com/minalbansal14/Machine_Learning_Projects/tree/f44b832151368f35f78a5e1c3199b6709edcbf3d/Anomaly%20Detection",
-        title: "Anomaly Detection in Customer Data",
-        description: "Implemented machine learning pipeline for anomaly detection at FU Berlin, utilizing data preprocessing techniques to reduce skewness from 11.11 to -0.73. Identified top 10 anomalies with isolation forest scoring.",
-        tags: ["Anomaly Detection", "ML Pipeline", "Data Science"]
+        link: "https://github.com/mahesh-sadupalli/ml-projects/tree/main/fno-dynamical-system",
+        title: "Fourier Neural Operator for Dynamical Systems",
+        description: "Learns PDE dynamics from snapshot data using Fourier Neural Operators that generalize across spatial resolutions. Achieves resolution invariance within ~3% error band across 4x resolution range with zero retraining. Transfer learning with just 32 trajectories yields 44% error reduction on shifted distributions.",
+        tags: ["Fourier Neural Operator", "PDE", "Transfer Learning", "PyTorch"]
     }
 ];
 
@@ -53,25 +61,28 @@ function Project() {
                         direction={index % 2 === 0 ? 'left' : 'right'}
                         className="project-reveal"
                     >
-                        <a href={project.link} target="_blank" rel="noreferrer" className="project-card-link">
-                            <div className={`project-card project-card-${index}`}>
-                                <div className="project-card-image">
-                                    <img src={project.image} alt={project.title} />
-                                    <div className="project-card-overlay">
-                                        <span className="project-view-label">View Project &rarr;</span>
-                                    </div>
-                                </div>
-                                <div className="project-card-body">
-                                    <div className="project-tags">
-                                        {project.tags.map((tag, i) => (
-                                            <span key={i} className="project-tag">{tag}</span>
-                                        ))}
-                                    </div>
-                                    <h2>{project.title}</h2>
-                                    <p>{project.description}</p>
+                        <div className={`project-card project-card-${index}`}>
+                            <div className="project-card-image">
+                                <img src={project.image} alt={project.title} />
+                                <div className="project-card-overlay">
+                                    <span className="project-view-label">View Project &rarr;</span>
                                 </div>
                             </div>
-                        </a>
+                            <div className="project-card-body">
+                                <div className="project-tags">
+                                    {project.tags.map((tag, i) => (
+                                        <span key={i} className="project-tag">{tag}</span>
+                                    ))}
+                                </div>
+                                <h2>{project.title}</h2>
+                                <p>{project.description}</p>
+                            </div>
+                            <div className="project-card-footer">
+                                <a href={project.link} target="_blank" rel="noreferrer" className="mlu-button">
+                                    View Project &rarr;
+                                </a>
+                            </div>
+                        </div>
                     </ScrollReveal>
                 ))}
             </div>
