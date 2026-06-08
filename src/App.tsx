@@ -10,6 +10,8 @@ import {
 } from "./components";
 import './index.scss';
 import Achievements from './components/Achievements';
+import Resources from './components/Resources';
+import Hobbies from './components/Hobbies';
 
 
 function App() {
@@ -38,8 +40,10 @@ function App() {
         <Main/>
         <Expertise/>
         <Achievements />
+        <Hobbies/>
         <Timeline/>
         <Project/>
+        <Resources/>
         <Contact/>
         <Footer />
     </div>
