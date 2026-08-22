@@ -97,19 +97,19 @@ function Timeline() {
 
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="Oct 2022 — Present"
+            date="Oct 2022 — June 2026"
             iconStyle={{ background: eduColor, color: '#fff' }}
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
             <h3 className="vertical-timeline-element-title">M.Sc. Artificial Intelligence</h3>
-            <h4 className="vertical-timeline-element-subtitle">BTU Cottbus-Senftenberg, Germany</h4>
+            <h4 className="vertical-timeline-element-subtitle">BTU Cottbus-Senftenberg, Germany — Completed (Grade 2.1; thesis 1.3)</h4>
             <p>
               Statistics, Mathematics for AI, Algoritm and Data structures, Data Mining, Explainable AI, Scalable ML systems
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="Oct 2023 — Present"
+            date="Oct 2023 — June 2026"
             iconStyle={{ background: eduColor, color: '#fff' }}
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >

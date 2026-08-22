@@ -32,7 +32,7 @@ function Main() {
                 <span className="hero-line hero-line-2">SADUPALLI</span>
               </h1>
               <p className="hero-title">AI / Data Science <em>Engineer</em></p>
-              <p className="hero-education">M.Sc. Artificial Intelligence @ BTU Cottbus-Senftenberg<br/>Visiting Student @ TU Berlin (Machine Learning, Deep Learning, Python for ML)<br/>BS Data Science @ IIT Madras</p>
+              <p className="hero-education">M.Sc. Artificial Intelligence @ BTU Cottbus-Senftenberg (2026)<br/>Visiting Student @ TU Berlin (Machine Learning, Deep Learning, Python for ML)<br/>BS Data Science @ IIT Madras</p>
             </div>
 
             <div className="hero-image-block">
