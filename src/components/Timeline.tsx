@@ -33,7 +33,20 @@ function Timeline() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="Oct 2025 — Present"
+            date="July 2026 — Present"
+            iconStyle={{ background: workColor, color: '#fff' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h3 className="vertical-timeline-element-title">Research Associate (Wissenschaftlicher Mitarbeiter)</h3>
+            <h4 className="vertical-timeline-element-subtitle">Robert Koch Institut, Berlin</h4>
+            <p>
+              Designing and maintaining semantic healthcare data models (HL7 FHIR profiles) for DEMIS, Germany's electronic notification system for infectious disease surveillance. Authoring StructureDefinitions, constraints, extensions, value sets and terminology bindings in FHIR Shorthand (FSH); managing dependency-aware package releases with the Java-based DEMIS profile-loader; publishing and validating implementation guides with IG Publisher and Simplifier.net for structured clinical data exchange between laboratories, hospitals and public health authorities.
+            </p>
+          </VerticalTimelineElement>
+
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="Oct 2025 — May 2026"
             iconStyle={{ background: workColor, color: '#fff' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >

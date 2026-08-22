@@ -8,8 +8,8 @@ const updates = [
     {
         icon: faBriefcase,
         category: "Work",
-        title: "AI Research @ Robert Koch Institute",
-        description: "Building multimodal deep learning models combining satellite imagery with sociodemographic data for healthcare prediction in Germany.",
+        title: "Research Associate @ Robert Koch Institut",
+        description: "Building semantic healthcare data models (HL7 FHIR profiles) for DEMIS — turning clinical requirements into machine-readable specifications with FHIR Shorthand, and publishing validated implementation guides for public health data exchange.",
         status: "ongoing"
     },
     {
