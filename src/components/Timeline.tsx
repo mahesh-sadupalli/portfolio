@@ -21,14 +21,14 @@ function Timeline() {
         <VerticalTimeline lineColor="var(--border)">
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2025 — Present"
+            date="2025 — June 2026"
             iconStyle={{ background: workColor, color: '#fff' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">Master Thesis Research</h3>
             <h4 className="vertical-timeline-element-subtitle">BTU Cottbus-Senftenberg | FG Numerische Mathematik und Wissenschaftliches Rechnen</h4>
             <p>
-              Concurrent Neural Network Training for Compression of Spatio-Temporal Data: Developing in-situ neural network-based compression for streaming CFD simulation data. Training coordinate-based MLPs to learn continuous field representations, achieving compression ratios up to 4,733:1. Comparing offline (batch) vs online (streaming) training paradigms and investigating catastrophic forgetting.
+              Concurrent Neural Network Training for Compression of Spatio-Temporal Data: in-situ neural compression for streaming CFD simulation data, benchmarking implicit neural representations against linear and convolutional autoencoders across three model sizes. Reached 37.97 dB PSNR at best quality and 4,733:1 at best compression, and mitigated catastrophic forgetting in online training with Experience Replay (+7.58 dB for the INR). Completed June 2026 with grade 1.3.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement

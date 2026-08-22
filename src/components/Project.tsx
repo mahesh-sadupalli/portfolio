@@ -12,7 +12,7 @@ const projects = [
         image: mock01,
         link: "https://github.com/mahesh-sadupalli/master-thesis",
         title: "Concurrent Neural Network Training for Compression of Spatio-Temporal Data",
-        description: "Master's thesis at BTU Cottbus-Senftenberg developing an in-situ neural compression framework for streaming CFD data (vortex-shedding case, 300 timesteps, ~7.9M spatio-temporal samples). A coordinate-based INR reaches 35.72 dB PSNR at 1,234:1 offline and streams concurrently with the simulation at up to 4,733:1. Quantified catastrophic forgetting in online training — full-dataset PSNR collapses to ~15 dB — and recovered +7.58 dB (15.22 → 22.80 dB) with Experience Replay.",
+        description: "Completed Master's thesis (grade 1.3) at BTU Cottbus-Senftenberg: an in-situ neural compression framework for streaming CFD data (vortex-shedding case, 300 timesteps, ~7.9M spatio-temporal samples). Benchmarked three architectures — coordinate-based INR, linear autoencoder, convolutional autoencoder — across three model sizes in offline and online modes on a single NVIDIA T4. Best quality: 37.97 dB PSNR (linear AE); best compression: 4,733:1 (INR, offline). Quantified catastrophic forgetting in streaming training — full-dataset PSNR collapses to 15.22 dB — and recovered +7.58 dB (→ 22.80 dB) with Experience Replay, while the Conv2D AE streams within 1.42 dB of its offline reference.",
         tags: ["PyTorch", "Implicit Neural Representations", "Continual Learning", "CFD"]
     },
     {

@@ -16,8 +16,8 @@ const updates = [
         icon: faGraduationCap,
         category: "Thesis",
         title: "Neural Network-Based Data Compression",
-        description: "Wrapping up my Master's thesis on in-situ neural compression for streaming CFD data at Rolls Royce & BTU, reaching up to 4,733:1 compression — submitting June 2026.",
-        status: "ongoing"
+        description: "Submitted and defended June 2026 (grade 1.3). In-situ neural compression for streaming CFD data at BTU, TU Berlin and Friendship Systems — up to 4,733:1 compression, with Experience Replay recovering +7.58 dB of the quality lost to catastrophic forgetting.",
+        status: "completed"
     },
     {
         icon: faLightbulb,
