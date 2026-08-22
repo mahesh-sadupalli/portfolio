@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024" width="1536" height="1024">
+  <rect width="1536" height="1024" fill="#CFE1DB"/>
+
+  <!-- comparison panel: two agent versions scored by a judge -->
+  <rect x="130" y="250" width="600" height="420" rx="34" fill="#8FB0A8"/>
+
+  <rect x="190" y="330" width="330" height="58" rx="29" fill="#26415C"/>
+  <rect x="190" y="430" width="440" height="58" rx="29" fill="#5B84A8"/>
+
+  <!-- the measured interval: bracket plus corrected point estimate -->
+  <path d="M 210 570 L 210 620 M 210 595 L 560 595 M 560 570 L 560 620"
+        stroke="#26415C" stroke-width="16" stroke-linecap="round" fill="none"/>
+  <circle cx="385" cy="595" r="30" fill="#D9415F"/>
+
+  <!-- arrow into the gate -->
+  <path d="M 790 460 L 930 460" stroke="#26415C" stroke-width="18" stroke-linecap="round"/>
+  <path d="M 900 425 L 940 460 L 900 495" stroke="#26415C" stroke-width="18"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- ship / no-ship gate -->
+  <rect x="1000" y="200" width="380" height="46" rx="23" fill="#26415C"/>
+  <rect x="1010" y="246" width="62" height="530" rx="20" fill="#26415C"/>
+  <rect x="1308" y="246" width="62" height="530" rx="20" fill="#26415C"/>
+
+  <circle cx="1190" cy="500" r="130" fill="#5B84A8"/>
+  <path d="M 1128 502 L 1173 548 L 1256 452" stroke="#CFE1DB" stroke-width="26"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
